@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event</title>
+    <style>
+         body{ 
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3vh;
+         }
+
+         div{
+            height: 40vh;
+            width: 20vw;
+            border-radius: 20px;
+            background-color: rgb(216, 230, 26);
+         }
+
+         .btn1 , .btn2{
+            width: 180px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            background-color: #66b3ff;
+         }
+
+         h1{
+            text-align: center;
+            margin-top: 100px;
+         }
+    </style>
 </head>
-<body>
-    
+<body onload="contendLoad()">
+       <button class="btn1" onclick="clickBtn()">ONE click me</button> 
+       <button class="btn2"  ondblclick="dblClickBtn()">DOUBLE click me</button>
+       
+        <div onmouseover="mOver()" onmousemove="mMove()"><h1>I am Mayur</h1></div>
+        
+
+      <script>
+          function clickBtn(){
+            document.write("Hare Ram")
+          }
+
+          function dblClickBtn(){
+             document.write("Hare Krishana")
+          }
+
+          function mOver(){
+            alert("you over the mouse on div")
+          }
+
+          function mMove(){
+             alert("you move the mouse on a div")
+          }
+
+          function mLeave(){
+             alert("you leave the mouse on the div")
+          }
+   
+          function contendLoad(){
+             console.log("all body content load succesfully...")
+          }
+           
+           
+      </script>
 </body>
 </html>
